@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>Formulir Pendaftaran Pasien Rumah Sakit Khusus Anggota TNI</title>
+</head>
+<body>
+<h1 style="background-color:green;">Formulir Pendaftaran Pasien Rumah Sakit Khusus Anggota TNI</h1>
+	<form id="registrationForm">
+		<label for="nama_lengkap">Nama lengkap:</label>
+		<input type="text" name="nama_lengkap" id="nama_lengkap" required><br>
+
+		<label for="usia">Usia:</label>
+		<input type="number" name="usia" id="usia" required><br>
+
+		<label for="poli">Poli:</label>
+		<input type="text" name="poli" id="poli" required><br>
+ 
+
+		<label for="tanggal_periksa">Tanggal periksa:</label>
+		<input type="date" name="tanggal_periksa" id="tanggal_periksa" required><br>
+
+        <button type="button" onclick="registerPatient()">Daftar</button><br>
+    </form>
+
+    <div id="registrationDetails" style="display: none;">
+        <h1 style="background-color:orange;"> Selamat Mayor Jenderal TNI. Dr. Ir. Aditya Dwi, S.E., S.H., S.T., M.A., M.Si., M.D.S., M.Si. (Han)                          .Pendaftaran Anda Telah Berhasil!!!</h1>
+        <p>Nama Lengkap: <span id="displayNama"></span></p>
+        <p>Usia: <span id="displayUsia"></span></p>
+        <p>Poli: <span id="displayPoli"></span></p>
+        <p>Tanggal Periksa: <span id="displayTanggal"></span></p>
+        <p>Nomor Pendaftaran: <span id="nomor_pendaftaran"></span></p>
+    </div>
+
+    <script>
+        function registerPatient() {
+            var nama = document.getElementById("nama_lengkap").value;
+            var usia = document.getElementById("usia").value;
+            var poli = document.getElementById("poli").value;
+            var tanggal = document.getElementById("tanggal_periksa").value;
+			
+            document.getElementById("displayNama").textContent = nama;
+            document.getElementById("displayUsia").textContent = usia;
+            document.getElementById("displayPoli").textContent = poli;
+            document.getElementById("displayTanggal").textContent = tanggal;
+
+            var nomor_pendaftaran = Math.floor(Math.random() *25);
+            document.getElementById("nomor_pendaftaran").textContent = nomor_pendaftaran;
+
+            document.getElementById("registrationForm").style.display = "none";
+            document.getElementById("registrationDetails").style.display = "block";
+        }
+    </script>
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu navbar</title>
+    <link rel="stylesheet" href="adit.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="berita.html">Home</a></li>
+        <li><a href="foto2.html">Biodata</a></li>
+        <li><a href="aditya.html">Gallery</a></li>
+        <li class="dropdown">
+  <ul>          
+            </div>
+        </li>
+    </ul>
+	
+    <h3>Aditya & Tifani</h3>
+    <p>Sma negeri 1 giri taruna bangsa</p>
+
+</body>
+
+</html>
